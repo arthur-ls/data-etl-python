@@ -5,17 +5,17 @@ import json
 import psycopg2 as ps2
 from sqlalchemy import create_engine
 
-headers = {'apikey': 'fb0e7c40-db81-11ec-ac9b-6fd67f3c9f94'}
+headers = {'apikey': API_KEY}
 params = (("league_id", "314"),)
 params2 = (("continent", "Europe"),)
 params3 = (("country_id", "48"),)
 params4 = (("season_id", "496"),)
 
-api_url_countries = 'https://app.sportdataapi.com/api/v1/soccer/countries'
-api_url_seasons = 'https://app.sportdataapi.com/api/v1/soccer/seasons'
-api_url_teams = 'https://app.sportdataapi.com/api/v1/soccer/teams'
-api_url_players = 'https://app.sportdataapi.com/api/v1/soccer/players'
-api_url_standings = 'https://app.sportdataapi.com/api/v1/soccer/standings'
+api_url_countries = ENDPOINT_COUNTRIES
+api_url_seasons = ENDPOINT_SEASONS
+api_url_teams = ENDPOINT_TEAMS
+api_url_players = ENDPOINT_PLAYERS
+api_url_standings = ENDPOINT_STANDINGS
 
 response_countries = req.get(
     api_url_countries, headers=headers, params=params2)
