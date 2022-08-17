@@ -2,7 +2,7 @@
 
 ## Summary
 In this project I created a data pipeline that gets data from SportsDataAPI, transform the data and load it in PostgreSQL that is up due to Docker.
-
+![](img/data_etl_python.png)
 
 ## Methodology
 For this project, I used Python for the entire process from data extraction to data load.
@@ -10,6 +10,8 @@ I used the requests python lib to GET SportsDataAPI data, besides ```json``` and
 I also used environment variables to store links and keys that make the connection with the database and API.
 Finally, I used Docker to upload a PostgreSQL image and be able to store data.
 The tables database are:
+
+![](img/soccer_database_diagram.png)
 
 The database structure is close to snowflake, since the fact table would be ```standings``` that shows all the team games.
 
